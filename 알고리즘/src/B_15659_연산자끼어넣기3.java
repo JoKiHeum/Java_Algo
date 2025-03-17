@@ -1,51 +1,58 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
 import java.util.StringTokenizer;
 
+
 public class B_15659_연산자끼어넣기3 {
+
 	static int N;
-	static int[] number;
-	static int[] operator = new int[4];
-	static int MAX = Integer.MIN_VALUE;
-	static int MIN = Integer.MAX_VALUE;
-	static int[] cal;
+	static int[] numbers;
+	static int[] operators = new int[4];
+	static int max = Integer.MIN_VALUE; // 최대값 
+	static int min = Integer.MAX_VALUE; // 최소값 
+	static int[] arr; 
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
-		number = new int[N];
-		cal = new int[N-1];
+		
+		numbers = new int[n];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++) {
-			number[i] = Integer.parseInt(st.nextToken());
+		
+		for (int i = 0; i < N; i++ ) {
+			numbers[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i< 4; i++) {
-			operator[i] = Integer.parseInt(st.nextToken());
-		}
+		for (int i = 0; i < 4; i++) {
+			operators[i] = Integer.parseInt(st.nextToken());
+		}	
 	}
 	
-	public static void dfs(int level) {
-		if (level == N-1) {
-			
+	static void DFS(int level) {
+		if (level == N) {
+			int result = cal();
+			min = Math.min(min, result);
+			max = Math.max(max, result);
+			return;
+		}
+		for (int i = 0; i < 4; i++) {
+			if (operators[i] > 0) {
+				operators[i] -= 1;
+				
+				if (i == 0) {
+					
+				}
+			}
 		}
 		
-		for (int i = 0; i < 4; i++) {
-			if (i == 0) {
-				continue;
-			}
-			cal[level] = i; 
-					
-			operator[i] -= 1;
-			dfs(level++);
-			operator[i] += 1;
-		}
+		
 	}
 	
-	public static int calculater(int[] cal) {
+	static int cal() {
 		
 	}
 }
