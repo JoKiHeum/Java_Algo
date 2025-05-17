@@ -52,7 +52,7 @@ public class B_15659_연산자끼어넣기3 {
 		
 	}
 	
-	static int cal() {
-		
-	}
+//	static int cal() {
+//		
+//	}
 }
