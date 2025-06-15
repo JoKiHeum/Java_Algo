@@ -57,8 +57,8 @@ public class B_21610_마법사상어와비바라기 {
 			int r = cloud.get(i)[0];
 			int c = cloud.get(i)[1];
 			 
-			int nr = (N*s + r + (dr[d-1] * s)) % N;
-			int nc = (N*s + c + (dc[d-1] * s)) % N;
+			int nr = (N*s + r + (dr[d-1] * s)) % N; // S가 크면 단순히 N을 더해도 인덱스를 벗어나기 때문에 
+			int nc = (N*s + c + (dc[d-1] * s)) % N; // S만큼 N을 곱해줌 
 			
 			temp.add(new int[] {nr,nc});
 		}
