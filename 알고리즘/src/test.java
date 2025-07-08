@@ -1,10 +1,31 @@
-import java.util.*;
-public class test {
-// 10진수를 2진수로 변환 
-	public static void main (String args[]) {
-		int a = 1 << 0;
-		System.out.println(a);
+class Main {
+
+	public static class Collection<T>{
+		T value;
+
+		public Collection(T t){
+			value = t;
+		}
+
+		public void print(){
+			new Printer().print(value);
+		}
+
+		class Printer{
+			void print(Integer a){
+				System.out.print("A" + a);
+			}
+			void print(Object a){
+				System.out.print("B" + a);
+			}
+			void print(Number a){
+				System.out.print("C" + a);
+			}
+		}
 	}
-   
- 
+
+	public static void main(String[] args) {
+		new Collection<>(0).print();
+	}
+
 }
