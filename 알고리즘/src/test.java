@@ -1,41 +1,34 @@
 public class test {
 	public static void main(String[] args) {
-		new Child();
-		System.out.println(Parent.total);
+		B b1 = new B();
+		A b2 = new B();
+		System.out.println(b1.a + b2.a);
+		System.out.println(b2.a);
 	}
 }
 
 
-class Parent {
-	static int total = 0;
-	int v = 1;
+class A {
+	int a = 10;
 
-	public Parent() {
-
-		total += (++v);
-		System.out.println(total);
-		show();
+	public A() {
+		System.out.print("가");
 	}
 
-	public void show() {
-		System.out.println("부모 실행");
-		total += total;
+	public A(int x) {
+		System.out.print("나");
 	}
 }
 
 
-class Child extends Parent {
-	int v = 10;
+class B extends A {
+	int a = 20;
 
-	public Child() {
-		v += 2;
-		total += v++;
-		show();
+	public B() {
+		System.out.print("다");
 	}
 
-	@Override
-	public void show() {
-		System.out.println("자식실행");
-		total += total * 2;
+	public B(int x) {
+		System.out.print("라");
 	}
 }
