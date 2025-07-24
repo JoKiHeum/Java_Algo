@@ -1,5 +1,3 @@
-package 알고리즘연습;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

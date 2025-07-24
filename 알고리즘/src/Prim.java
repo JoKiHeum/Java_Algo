@@ -1,5 +1,3 @@
-package 알고리즘연습;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
