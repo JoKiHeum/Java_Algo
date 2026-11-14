@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class B_22865_가장먼곳 {
+public class 	B_22865_가장먼곳 {
 	static class Edge implements Comparable<Edge>{
 		int v;
 		int dist;
